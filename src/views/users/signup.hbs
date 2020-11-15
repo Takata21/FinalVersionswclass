@@ -1,0 +1,65 @@
+<img class="wave" src="/public/img/wave.png">
+    <div class="container">
+        <div class="img">
+            <img src="/public/img/logo.svg">
+            <span class="registrate">Regístrate!</span>
+        </div>
+
+        <div class="login-content">
+            <form action="/user/signup" id="form" class="formulario" method="POST">
+                <img src="/public/img/avatar.svg">
+                <div class="input-div one">
+                    <div class="i">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="div">
+                        <input type="text" class="input" name="name" autofocus placeholder="Nombre">
+                    </div>
+                </div>
+                <div class="input-div one">
+                    <div class="i">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="div">
+
+                        <input type="text" class="input" name="user" placeholder="Username">
+                    </div>
+
+                </div>
+                <div class="input-div one">
+                    <div class="i">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="div">
+
+                        <input type="text" class="input" name="email" placeholder="Email">
+                    </div>
+
+                </div>
+                <div class="input-div pass" id="password-class">
+                    <div class="i">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="div">
+
+                        <input type="password" class="input" name="password" placeholder="Contraseña" id="password">
+                    </div>
+
+                </div>
+                <div class="input-div pass" id="password-class2">
+                    <div class="i">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="div">
+
+                        <input type="password" class="input" name="password2" placeholder="Repetir Contraseña" id="password2">
+                    </div>
+                </div>
+                <small id="msg">Ambas contraseñas deben ser iguales</small>
+
+                <a href="/user/login">¿Ya tienes cuenta? Iniciar Sesión </a>
+                <input type="submit" class="btn" value="Login">
+            </form>
+        </div>
+    </div>
+    
