@@ -1,15 +1,13 @@
-<<<<<<< Updated upstream
 const express = require('express')
 const config = require('./server/server.config')
 const Flash = require('connect-flash');
-
 
 //Database
 require('./database')
 
 //Server
 
-const app = (config(express()))
+const app = config(express());
 
 // //Global Variables
 // app.use((req, res, next) => {
@@ -24,6 +22,3 @@ const app = (config(express()))
 app.listen(app.get('port'), () => {
     console.log('Server on port', app.get('port'))
 })
-=======
-
->>>>>>> Stashed changes
