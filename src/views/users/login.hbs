@@ -1,0 +1,33 @@
+  <img class="wave" src="/public/img/wave.png">
+    <div class="container">
+        <div class="img">
+            <img src="/public/img/logo.svg">
+            <span class="registrate">Iniciar Sesión!</span>
+        </div>
+        <div class="login-content">
+            <form action="/user/login" method="POST" id="form">
+                <img src="/public/img/avatar.svg">
+
+                <div class="input-div one">
+                    <div class="i">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="div">
+                        <input type="text" class="input" name="user" placeholder="Username" autofocus>
+                    </div>
+                </div>
+                <div class="input-div pass">
+                    <div class="i">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="div">
+                        <input type="password" class="input" name="password" placeholder="Contraseña">
+                    </div>
+                </div>
+                <a href="/user/signup">¿ Aun no tienes cuenta ?
+                    Regístrate</a>
+                <input type="submit" class="btn" value="Login">
+            </form>
+        </div>
+    </div>
+    <script src="/public/js/{{Htmldetails.script}}"></script>

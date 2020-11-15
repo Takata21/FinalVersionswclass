@@ -1,13 +1,12 @@
 const express = require('express')
 const router = express.Router()
-const home = require('../controllers/home.controllers')
+const { renderIndex } = require('../controllers/index.controllers')
+
+router.get('/', renderIndex)
 
 
 
-module.exports = app => {
-    router.get('/', home.index)
 
 
-    app.use(router)
 
-}
+module.exports = router

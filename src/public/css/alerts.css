@@ -1,0 +1,32 @@
+.alert_success {
+    background: #def2d6;
+    max-width: 445px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    padding: 25px 50px;
+    border-radius: 3px;
+    transition: all .2s ease;
+    margin: auto;
+    margin-top: 50px;
+    justify-content: space-between;
+    color: #5a7052;
+}
+
+.alert_success.error {
+    background: #ecc8c5;
+    color: #b32f2d;
+    font-size: 18px;
+}
+
+.alert_success.descative {
+    visibility: hidden;
+}
+
+.alert_success .icon {
+    font-size: 32px;
+}
+
+.alert_success .icon.close {
+    cursor: pointer;
+}
