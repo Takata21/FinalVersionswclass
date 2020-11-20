@@ -12,6 +12,20 @@ classCtrl.renderHome = (req, res) => {
     res.render('class/home', { Htmldetails })
 }
 
+classCtrl.renderClass = (req, res) => {
+    let Htmldetails = {
+        title: "Clases y Cursos",
+        styles: "styles.css",
+        script: "script.js"
+
+    }
+    res.render('class/mycourses', { Htmldetails })
+}
+
+classCtrl.createClass = (req, res) => {
+    res.send('Creating class')
+}
+
 // classCtrl.newClass = (req, res) => {
 
 // }

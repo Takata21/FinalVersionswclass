@@ -154,8 +154,8 @@
     display: inline-flex;
     width: 150px;
     height: 40px;
-    background: url(../../public/img/logo-bookmark.svg) no-repeat center;
-    background-size: contain;
+    background: url(../../public/img/logo.svg) no-repeat center;
+    background-size: cover;
 }
 
 .features {
