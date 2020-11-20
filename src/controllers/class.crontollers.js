@@ -1,16 +1,21 @@
 const passport = require('passport')
-const { Users } = require('../models/index.models')
+const { Users, Class } = require('../models/index.models')
 const classCtrl = {}
 
-classCtrl.renderPanel = (req, res) => {
+classCtrl.renderHome = (req, res) => {
     let Htmldetails = {
-        title: "Panel de Estudiante",
-        styles: "login.css",
+        title: "Home",
+        styles: "styles.css",
         script: "script.js"
 
     }
-    res.render('class/panel', { Htmldetails })
+    res.render('class/home', { Htmldetails })
 }
+
+// classCtrl.newClass = (req, res) => {
+
+// }
+
 
 
 module.exports = classCtrl

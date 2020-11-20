@@ -58,7 +58,7 @@ userCtrl.SignUp = async(req, res) => {
 
 userCtrl.login = passport.authenticate('local', {
     failureRedirect: '/user/login',
-    successRedirect: '/class/panel',
+    successRedirect: '/user/home',
     failureFlash: true
 })
 
@@ -66,6 +66,15 @@ userCtrl.logout = (req, res) => {
     req.logout()
     req.flash(req.flash('success_msg', 'You are logged out now.'))
     res.redirect('/user/login')
+}
+userCtrl.home = (req, res) => {
+    let Htmldetails = {
+        title: "Iniciar Sesion",
+        styles: "login.css",
+        script: "login.js"
+
+    }
+    res.render('users/home', { Htmldetails })
 }
 
 module.exports = userCtrl
