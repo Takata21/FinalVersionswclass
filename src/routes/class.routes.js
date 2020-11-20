@@ -5,7 +5,7 @@ const { renderPanel } = require('../controllers/class.crontollers')
 
 
 
-router.get('/class/panel', renderPanel)
+router.get('/class/newclass', renderPanel)
 
 
 module.exports = router

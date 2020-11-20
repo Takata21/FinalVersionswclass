@@ -44,8 +44,11 @@ userCtrl.SignUp = async(req, res) => {
 
     const emailUser = await Users.findOne({ email: email })
     const userName = await Users.findOne({ user: user })
+    console.log("Username " + emailUser)
+    console.log("Username pruebra" + userName)
     if (emailUser || userName) {
         console.log('EMAIL REPETIDO')
+        res.redirect('/user/signup')
     } else {
         const newUser = new Users({ name, user, email, password })
         newUser.password = await newUser.encryptPassword(password)
