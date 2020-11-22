@@ -1,0 +1,142 @@
+{{>user_navigation}}
+<div class="container" id="container">
+<section class="class ">
+    <div class="u-wrapper">
+        <h2 class="u-h2">Elige una clase
+        </h2>
+        <p class="u-parrafo">
+            Quieres una atencin mas personalizada? Pues reserva la clase que quieras
+        </p>
+
+        <div class="class-grid">
+
+            <div class="class-item">
+                <img src="/public/img/atom.svg" alt="">
+                <h3 class="uh3">
+                    Clase de Fisica
+                </h3>
+                <p class="u-parrafo">
+                    Incluida con tu supcripción
+                </p>
+                <button class="u-buttom fullWitho" id="r-p" data-class="Física">
+                    Reservar Clase
+                </button>
+            </div>
+
+            <div class="class-item">
+                <img src="/public/img/calculating.svg" alt="">
+                <h3 class="uh3">
+                    Clase de Matemáticas
+                </h3>
+                <p class="u-parrafo">
+                    Incluida con tu supcripción
+                </p>
+                <button class="u-buttom fullWitho" id="r-m" data-class="Matemáticas"> 
+                    Reservar Clase
+                </button>
+            </div>
+
+
+
+            <div class="class-item">
+                <img src="/public/img/english.svg" alt="">
+                <h3 class="uh3">
+
+                    Clase de Ingles
+                </h3>
+                <p class="u-parrafo">
+                    Incluida con tu supcripción
+                </p>
+                <button class="u-buttom fullWitho" id="r-e" data-class="Inglés">
+                    Reservar Clase
+                </button>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+</section>
+
+
+<section class="class ">
+    <div class="u-wrapper">
+        <h2 class="u-h2">Elige uno de nuestros cursos
+        </h2>
+        <p class="u-parrafo">
+            Quieres aprender cosas nueva e ir al siguiente nivel del conocimiento? Pues toma uno de nuestro cursos!
+        </p>
+
+        <div class="class-grid">
+
+            <div class="class-item">
+                <img src="/public/img/atom.svg" alt="">
+                <h3 class="uh3">
+                    Clase de Física
+                </h3>
+                <p class="u-parrafo">
+                    Incluida con tu supcripción
+                </p>
+                <button class="u-buttom fullWitho" id="r-c-p" >
+                    Tomar curso
+                </button>
+            </div>
+
+            <div class="class-item">
+                <img src="/public/img/calculating.svg" alt="">
+                <h3 class="uh3">
+                    Curso de Matemáticas
+                </h3>
+                <p class="u-parrafo">
+                    Incluida con tu supcripción
+                </p>
+                <button class="u-buttom fullWitho" id="r-c-m" >
+                    Tomar curso
+                </button>
+            </div>
+
+
+
+            <div class="class-item">
+                <img src="/public/img/english.svg" alt="">
+                <h3 class="uh3">
+                    Curso de Ingles
+                </h3>
+                <p class="u-parrafo">
+                    Incluida con tu supcripción
+                </p>
+                <button class="u-buttom fullWitho" id="r-c-e">
+                    Tomar curso
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section>
+    <div class="overlay" id="overlay">
+        <div class="popup" id="popup">
+            <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+            <h3>Reservar clase de</h3>
+            <h3 id="class"></h3>
+
+            <h4>Introduce los dato para tu clase</h4>
+            <form action="/class/newclass/" method="POST" id="formulario" class="formularioc">
+                <div class="contenedor-inputs">
+                    <input type="hidden" name="subject" value="" id="subject">
+                    <input type="number" placeholder="Cantidad de horas (No mas de 5)" name="hours" min="1" max="5" required value="1">
+                    <label for="classdatetime">Selecciona la fecha y hora de inicio de la clase</label>
+                    <input type="datetime-local" placeholder="Hora de incio" id="datetime" name="classdatetime" required>
+                </div>
+                <input type="submit" class="btn-submit" value="Aceptar" id="btn-submit">
+            </form>
+        </div>
+    </div>
+
+</section>
+</div>
+
+<script src="/public/js/classfomr.js"></script>
