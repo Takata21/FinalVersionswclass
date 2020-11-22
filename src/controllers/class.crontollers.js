@@ -28,12 +28,7 @@ classCtrl.createClass = async(req, res) => {
     console.log(req.body)
 
     if (subject !== "" & hours !== "" & classdatetime !== "") {
-        const newClass = new Class({ subject, hours, classdatetime })
-        console.log(newClass)
-        console.log(subject)
-        console.log(hours)
-        console.log(classdatetime)
-
+        newClass = new Class({ subject, hours, classdatetime })
         newClass.save()
             .then(() => {
 
