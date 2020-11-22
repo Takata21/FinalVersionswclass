@@ -55,7 +55,11 @@ form {
     width: 360px;
 }
 
-.login-content img {
+.login-content a {
+    text-align: center;
+}
+
+.login-content a>img {
     height: 100px;
 }
 
