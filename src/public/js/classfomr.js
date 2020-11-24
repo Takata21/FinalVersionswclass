@@ -25,6 +25,7 @@ function showPopForm(rp, rm, re, bc) {
 
 d.addEventListener('DOMContentLoaded', () => {
     showPopForm("#r-p", '#r-m', '#r-e', '#btn-cerrar-popup')
+    takeCourse('#r-c-p', '#r-c-m', '#r-c-e')
 
 
 })
@@ -33,4 +34,52 @@ datetime.addEventListener('change', () => {
 })
 
 
+async function getCourse(course, user) {
+    data = {
+        'course': course,
+        'user': user
+    }
+
+    console.log(data)
+
+    const URI = `/course/newcourse`
+    const response = await fetch(URI, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) })
+    const dataresponse = await response.json()
+    console.log(await dataresponse)
+
+    return dataresponse
+
+}
+
+function takeCourse(rcp, rcm, rce) {
+    d.addEventListener('click', (e) => {
+        if (e.target.matches(rcp)) {
+            console.log(e)
+            let course = e.target.dataset.course
+            let user = 'TKT'
+            const data = getCourse(course, user)
+            console.log(data)
+            console.log('Hey')
+
+        }
+        if (e.target.matches(rcm)) {
+            console.log(e)
+            let course = e.target.dataset.course
+            let user = 'TKT'
+            const data = getCourse(course, user)
+
+
+        }
+        if (e.target.matches(rce)) {
+            console.log(e)
+            let course = e.target.dataset.course
+            let user = 'TKT'
+            const data = getCourse(course, user)
+
+
+        }
+
+    })
+
+}
 // date.addEventListener('change', () => {})

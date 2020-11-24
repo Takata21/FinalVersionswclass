@@ -13,15 +13,6 @@ classCtrl.renderHome = (req, res) => {
     res.render('class/home', { Htmldetails })
 }
 
-classCtrl.renderClass = (req, res) => {
-    let Htmldetails = {
-        title: "Clases y Cursos",
-        styles: "class.css",
-        script: "script.js"
-
-    }
-    res.render('class/mycourses', { Htmldetails })
-}
 
 classCtrl.createClass = async(req, res) => {
     const { subject, hours, classdatetime } = req.body
@@ -47,10 +38,29 @@ classCtrl.createClass = async(req, res) => {
 
 
 classCtrl.renderClass = async(req, res) => {
-    const myclass = await Class.find().sort({ createdAt: 'desc' })
-    res.render('class/myclass', { myclass })
-    console.log(myclass)
+    let Htmldetails = {
+        title: "Clases y Cursos",
+        styles: "class.css",
+        script: ""
 
+    }
+    const myclass = await Class.find().sort({ createdAt: 'desc' })
+    res.render('class/myclass', { myclass, Htmldetails })
+    for (let index = 0; index < myclass.length; index++) {
+        console.log(myclass[index].subject)
+
+    }
+    myclass.forEach(element => {
+        console.log(element.subject)
+
+    });
+
+}
+
+classCtrl.cancelClass = async(req, res) => {
+    await Class.findByIdAndDelete(req.params.class_id)
+    console.log(req.params)
+    res.redirect('/class/myclass')
 
 }
 

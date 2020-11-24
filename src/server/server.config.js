@@ -52,6 +52,7 @@ module.exports = app => {
     app.use(require('../routes/index.routes'))
     app.use(require('../routes/user.routes'))
     app.use(require('../routes/class.routes'))
+    app.use(require('../routes/course.routes'))
 
     //Static files
 
