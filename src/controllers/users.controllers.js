@@ -58,7 +58,7 @@ userCtrl.SignUp = async(req, res) => {
 
 userCtrl.login = passport.authenticate('local', {
     failureRedirect: '/user/login',
-    successRedirect: '/user/home',
+    successRedirect: '/class/home',
     failureFlash: true
 })
 

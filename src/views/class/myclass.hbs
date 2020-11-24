@@ -1,6 +1,42 @@
-{{#each myclass}}
-<h1>{{_id}}</h1>
-<h1>{{subjet}}</h1>
-<h1>{{hours}}</h1>
-<h1>{{classdatetime}}</h1>
-{{/each}}
+<section class="class ">
+    <div class="u-wrapper">
+        <h2 class="u-h2">Proximas Clases</h2>
+        {{!-- <p class="u-parrafo">
+            Quieres aprender cosas nueva e ir al siguiente nivel del conocimiento? Pues toma uno de nuestro cursos!
+        </p> --}}
+
+        <div class="class-grid">
+            {{#if myclass}}
+
+            {{#each myclass}}
+            <div class="class-item">
+                <img src="/public/img/atom.svg" alt="">
+                <h3 class="uh3">
+                    Clase de {{subject}}
+                </h3>
+                <p class="u-parrafo">
+                    Clase en: {{timeago classdatetime}}
+                </p>
+                <form action="/class/myclass/delete/{{_id}}" method="POST">
+                <button type="submit" class="u-buttom fullWitho">Cancelar Clase</button>
+                </form>
+
+            </div>
+            {{/each}}
+            {{else}}
+            <div class="class-item">
+                <img src="/public/img/logo.svg" alt="">
+                <h3 class="uh3">
+                    No tienes clases pendientes
+                </h3>
+                <p class="u-parrafo">
+
+                </p>
+               
+                    <a href="/class/home" class="u-buttom fullWitho">Reservar Clase</a>
+                
+            </div>
+
+            {{/if}}
+        </div>
+</section>
