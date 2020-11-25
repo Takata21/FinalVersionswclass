@@ -41,7 +41,6 @@ userCtrl.SignUp = async(req, res) => {
 
     }
 
-
     const emailUser = await Users.findOne({ email: email })
     const userName = await Users.findOne({ user: user })
     console.log("Username " + emailUser)

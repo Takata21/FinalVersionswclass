@@ -1,6 +1,7 @@
 const passport = require('passport')
 const popup = require('node-popup').alert
 const { Users, Class } = require('../models/index.models')
+const { validateDate } = require('../helpers/libs')
 const classCtrl = {}
 
 classCtrl.renderHome = (req, res) => {
@@ -19,6 +20,13 @@ classCtrl.createClass = async(req, res) => {
     console.log(req.body)
 
     if (subject !== "" & hours !== "" & classdatetime !== "") {
+        const date = validateDate(classdatetime, Date.now())
+        if (!date) {
+            res.redirect('/class/home')
+
+
+        }
+
         newClass = new Class({ subject, hours, classdatetime })
         newClass.save()
             .then(() => {
