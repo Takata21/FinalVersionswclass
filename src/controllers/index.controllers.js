@@ -3,7 +3,7 @@ indexCtrl.renderIndex = (req, res) => {
     let Htmldetails = {
         title: "SWCLASS",
         styles: "styles.css",
-        script: 'main.js'
+        script: 'mainss.js'
 
     }
 
